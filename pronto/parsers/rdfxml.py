@@ -468,6 +468,7 @@ class RdfXMLParser(BaseParser):
                         SyntaxWarning,
                         stacklevel=2,
                     )
+                    termdata.annotations.add(self._extract_literal_pv(child))
 
         # Owl to OBO post processing:
         # see http://owlcollab.github.io/oboformat/doc/obo-syntax.html#5.11
